@@ -1,0 +1,9 @@
+Title: Libp11 Developer's Manual
+Author: Libp11 development team
+Abstract: Information about using libp11
+Section: devel
+
+Format: HTML
+Index: /usr/share/doc/libp11-dev/index.html
+Files: /usr/share/doc/libp11-dev/*.html
+Files: /usr/share/doc/libp11-dev/*.css

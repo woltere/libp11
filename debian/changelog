@@ -1,0 +1,167 @@
+libp11 (0.2.8-5) unstable; urgency=medium
+
+  * debian/control: Standards-Version to 3.9.6 (no changes).
+  * debian/control: Canonicalize the Vcs-* headers.
+  * debian/control: Update Homepage field for new GitHub home.
+  * debian/control: Run wrap-and-sort.
+
+ -- Eric Dorland <eric@debian.org>  Fri, 10 Oct 2014 16:09:29 -0400
+
+libp11 (0.2.8-4) unstable; urgency=medium
+
+  * debian/control, debian/rules: Use dh-autoreconf. Thanks Breno
+    Leitao. (Closes: #750494)
+  * debian/watch: Update for new GitHub home.
+
+ -- Eric Dorland <eric@debian.org>  Sun, 08 Jun 2014 21:26:36 -0400
+
+libp11 (0.2.8-3) unstable; urgency=low
+
+  * debian/control: Change build dependency on debhelper to >= 9.
+  * debian/control: Upgrade Standards-Version to 3.9.4.
+  * debian/control, debian/rules: Use autotools-dev.
+  * debian/copyright: New DEP-5 copyright file.
+
+ -- Eric Dorland <eric@debian.org>  Sun, 15 Sep 2013 15:24:44 -0400
+
+libp11 (0.2.8-2) unstable; urgency=low
+
+  * debian/compat, debian/control: Use debhelper compat level v9.
+  * debian/control, debian/libp11-2.install, debian/libp11-dev.install:
+    Convert the package to Multi-Arch.
+  * debian/control: Upgrade Standards-Version to 3.9.2.0
+
+ -- Eric Dorland <eric@debian.org>  Sat, 24 Sep 2011 20:05:32 -0400
+
+libp11 (0.2.8-1) unstable; urgency=low
+
+  * New upstream release.
+  * debian/libp11-dev.install: Remove unneeded .la file. (Closes: #622516)
+  * debian/libp11-1.install, debian/libp11-2.install,
+    debian/libp11-1.shlibs, debian/libp11-2.shlibs,
+    debian/libp11-1.symbols, debian/libp11-2.symbols, debian/control,
+    debian/rules: Bump soname to 2.
+
+ -- Eric Dorland <eric@debian.org>  Sun, 01 May 2011 23:14:12 -0400
+
+libp11 (0.2.7-3) unstable; urgency=low
+
+  * debian/libp11-dev.docs: Fix bad documentation paths. (Closes: #585402)
+  * debian/compat, debian/control: Upgrade to debhelper level 8.
+  * debian/source/format: Convert to 3.0 (quilt) source format.
+
+ -- Eric Dorland <eric@debian.org>  Sun, 20 Feb 2011 01:04:29 -0500
+
+libp11 (0.2.7-2) unstable; urgency=high
+
+  * debian/rules: Fix dh_strip invocation to use proper debug
+    package. (Closes: #594504)
+  * debian/control:
+    - Bump debhelper Build-Depends to get override_ support.
+    - Bump Standards-Version to 3.9.1.0.
+
+ -- Eric Dorland <eric@debian.org>  Thu, 09 Sep 2010 01:37:53 -0400
+
+libp11 (0.2.7-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Eric Dorland <eric@debian.org>  Fri, 25 Dec 2009 02:46:56 -0500
+
+libp11 (0.2.6-1) unstable; urgency=low
+
+  * New upstream release.
+  * debian/compat: Upgrade to version 7.
+  * debian/rules, debian/control: Use dh instead of debhelper.
+  * debian/control: Upgrade Standards-Version to 3.8.3.
+  * debian/libp11-1.install,  debian/libp11-1.shlibs, debian/libp11-1.symbols,
+    debian/control: Rename libp11-0 to libp11-1
+
+ -- Eric Dorland <eric@debian.org>  Sun, 16 Aug 2009 23:45:00 -0400
+
+libp11 (0.2.4-2) unstable; urgency=low
+
+  * debian/control:
+    - Add ${misc:Depends} to packages.
+    - Bump Standards-Version to 3.8.1.
+    - Change libp11-0-dbg's Section to debug.
+
+ -- Eric Dorland <eric@debian.org>  Mon, 06 Apr 2009 03:51:15 -0400
+
+libp11 (0.2.4-1) unstable; urgency=low
+
+  * New upstream release.
+  * debian/libp11-0.symbols: 
+    - Add Build-Depends-Package header.
+    - Add changes for 0.2.4. Some symbols were removed as the exports were
+      tightened. The soname was not bumped, but as no one should be using
+      those symbols it should be ok.
+
+ -- Eric Dorland <eric@debian.org>  Sun, 08 Mar 2009 21:25:39 -0400
+
+libp11 (0.2.3-2) unstable; urgency=low
+
+  * debian/control: 
+    - Set Priority to extra for the -dbg package, as the override file says.
+    - Add Homepage and Vcs-* headers.
+  * debian/libp11-0.symbols: Add symbols file for new symbol based
+    dependency resolution.
+  * debian/libp11-0.shlibs: Bump version for last upstream release.
+
+ -- Eric Dorland <eric@debian.org>  Thu, 22 Nov 2007 22:55:45 -0500
+
+libp11 (0.2.3-1) unstable; urgency=low
+
+  * New upstream release.
+  * debian/control: 
+    - Bump Standards-Version to 3.7.2.2.
+    - Use ${binary:Version} instead of ${Source-Version}.
+
+ -- Eric Dorland <eric@debian.org>  Tue, 17 Jul 2007 22:23:31 -0400
+
+libp11 (0.2.2-2) unstable; urgency=low
+
+  * debian/watch: Fix completely screwed up watch file, looks like it was
+    still half example.
+  * debian/libp11-0.shlibs: Bump shlibs version, I think there are new
+    symbols in this version.
+
+ -- Eric Dorland <eric@debian.org>  Sun, 11 Jun 2006 01:25:03 -0400
+
+libp11 (0.2.2-1) unstable; urgency=low
+
+  * New upstream release.
+  * debian/control:
+    - Standards-Version to 3.7.2.0.
+    - Add -dbg package. 
+    - Need at least debhelper 5.
+  * debian/compat: Debhelper level to 5.
+  
+ -- Eric Dorland <eric@debian.org>  Sat, 10 Jun 2006 01:08:21 -0400
+
+libp11 (0.2.1-2) unstable; urgency=low
+
+  * debian/control:
+    - libp11-dev needs to depend of pkg-config.
+    - Rename libp11-1 to libp11-0, since that is the real soname.
+    - Conflict and Replace libp11-1.
+  * debian/libp11-1.*: Rename to debian/libp11-0.*.
+  * debian/libp11-0.shlibs: Fix soname and shlib dependency. 
+  
+
+ -- Eric Dorland <eric@debian.org>  Tue,  6 Dec 2005 02:14:42 -0500
+
+libp11 (0.2.1-1) unstable; urgency=low
+
+  * New upstream release.
+  * debian/libp11-1.shlibs: Bump dependency.
+  * debian/copyright: Include RSA license info. svn2cl license is not
+    necessary, it's not in the tarball.
+
+ -- Eric Dorland <eric@debian.org>  Sat, 26 Nov 2005 19:20:30 -0500
+
+libp11 (0.2.0-1) unstable; urgency=low
+
+  * Initial release.
+
+ -- Eric Dorland <eric@debian.org>  Wed, 23 Nov 2005 01:32:21 -0500

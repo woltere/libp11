@@ -1,0 +1,50 @@
+Source: libp11
+Section: libdevel
+Priority: optional
+Maintainer: Eric Dorland <eric@debian.org>
+Build-Depends: debhelper (>= 9),
+               dh-autoreconf,
+               libltdl3-dev,
+               libssl-dev,
+               pkg-config
+Standards-Version: 3.9.6
+Homepage: https://github.com/OpenSC/libp11
+Vcs-Git: git://anonscm.debian.org/pkg-opensc/libp11.git
+Vcs-Browser: http://anonscm.debian.org/gitweb/?p=pkg-opensc/libp11.git
+
+Package: libp11-dev
+Architecture: any
+Depends: libp11-2 (= ${binary:Version}),
+         libssl-dev,
+         pkg-config,
+         ${misc:Depends}
+Description: pkcs#11 convenience library - development files
+ Libp11 is a library to simplify using smart cards via PKCS#11
+ modules.  It was spun of the OpenSC project but can be used with any
+ pkcs#11 module.
+ .
+ This package contains the header files and static libraries.
+
+Package: libp11-2
+Architecture: any
+Multi-Arch: same
+Section: libs
+Pre-Depends: ${misc:Pre-Depends}
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Description: pkcs#11 convenience library
+ Libp11 is a library to simplify using smart cards via PKCS#11
+ modules.  It was spun of the OpenSC project but can be used with any
+ pkcs#11 module.
+
+Package: libp11-2-dbg
+Architecture: any
+Multi-Arch: same
+Section: debug
+Priority: extra
+Depends: libp11-2 (= ${binary:Version}), ${misc:Depends}
+Description: pkcs#11 convenience library - debugging symbols
+ Libp11 is a library to simplify using smart cards via PKCS#11
+ modules.  It was spun of the OpenSC project but can be used with any
+ pkcs#11 module.
+ .
+ This package contains the debugging symbols for libp11-2.
